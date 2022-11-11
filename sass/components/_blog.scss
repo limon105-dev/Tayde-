@@ -1,0 +1,71 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#blog {
+    padding: 35px 0;
+    background-color: #faf7f3;
+    position: relative;
+
+    .blog-top-shap {
+        position: absolute;
+        left: 0;
+        top: -120px;
+        z-index: -1;
+    }
+
+    .blog-btm-shap {
+        position: absolute;
+        left: 0;
+        bottom: -95px;
+        z-index: -1;
+    }
+
+    .blog-shap1 {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    }
+
+    .blog-shap2 {
+        position: absolute;
+        left: 120px;
+        bottom: 130px;
+    }
+
+    .blog-shap3 {
+        position: absolute;
+        right: 70px;
+        top: 90px;
+    }
+
+    .blog-shap4 {
+        position: absolute;
+        right: 0;
+        bottom: 90px;
+    }
+
+
+    .card-item-wrapper {
+        .card-text {
+            .price-rate {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                .date {
+                    h3 {
+                        @include fonts(30px, 800);
+                        line-height: 1;
+                    }
+
+                    p {
+                        @include fonts(16px, 500);
+                        color: $secondary_bg;
+                    }
+                }
+            }
+
+        }
+    }
+}

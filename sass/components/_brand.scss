@@ -1,0 +1,26 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#brand {
+    padding-top: 200px;
+    padding-bottom: 120px;
+
+    .sec-title {
+        margin-bottom: 15px;
+    }
+
+    .sec-text {
+        font-size: 24px;
+    }
+
+    .brand-wrapper {
+        margin-top: 60px;
+
+        .brand-item {
+            img {
+                filter: drop-shadow(0px 8px 14px rgba(37, 57, 98, 0.1));
+                -webkit-filter: drop-shadow(0px 8px 14px rgba(37, 57, 98, 0.1));
+            }
+        }
+    }
+}

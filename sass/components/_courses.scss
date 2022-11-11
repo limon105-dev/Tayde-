@@ -1,0 +1,40 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#courses {
+    padding: 80px 0;
+    background-color: #faf7f3;
+    position: relative;
+
+    .course-top-layer {
+        position: absolute;
+        left: 0;
+        top: -35px;
+        z-index: -1;
+    }
+
+    .course-shap1 {
+        position: absolute;
+        left: 150px;
+        top: 120px;
+    }
+
+    .course-shap2 {
+        position: absolute;
+        left: 130px;
+        bottom: 120px;
+    }
+
+    .course-shap3 {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+    }
+
+    .course-shap4 {
+        position: absolute;
+        bottom: 60px;
+        right: 140px;
+    }
+
+}

@@ -1,0 +1,190 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#banner {
+    padding-top: 195px;
+    position: relative;
+
+    .banner-top-layer {
+        position: absolute;
+        left: 0;
+        top: -5px;
+    }
+
+    .banner-btm-layer {
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+
+    .banner-star {
+        position: absolute;
+        left: 45px;
+        top: 150px;
+    }
+
+    .banner-light {
+        position: absolute;
+        left: 45px;
+        bottom: 150px;
+    }
+
+    .banner-rocket {
+        position: absolute;
+        right: 0;
+        top: 150px;
+    }
+
+    .banner-car {
+        position: absolute;
+        right: 75px;
+        bottom: 280px;
+    }
+
+    .banner-wrapper {
+
+        h1 {
+            @include fonts(80px, 800);
+            line-height: 90px;
+            padding-bottom: 40px;
+        }
+
+        p {
+            @include fonts(20px, 400);
+            padding-bottom: 50px;
+        }
+    }
+
+    .banner-btm-row {
+        background-color: $secondary_bg;
+        border-radius: 10px;
+        box-shadow: 0px 21px 28px -10px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 21px 28px -10px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 21px 28px -10px rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        padding: 65px 0;
+        margin-top: 145px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: -5px;
+            top: 70px;
+            width: 12px;
+            height: 80px;
+            background-color: $primary_bg;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+        }
+
+        .countdown-text {
+            padding-left: 80px;
+            padding-right: 60px;
+            border-right: 1px solid #eeeeee;
+
+            h2 {
+                @include fonts(36px, 600);
+                line-height: 46px;
+            }
+        }
+
+        .countdown-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            .countdown-item {
+                padding: 0 45px;
+                text-align: center;
+                position: relative;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                #days,
+                #hours,
+                #minutes,
+                #seconds {
+                    color: $heading_color;
+                    @include fonts(48px, 800);
+                }
+
+                p {
+                    color: $primary_bg;
+                    @include fonts(16px, 600);
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 23px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #d6dae2;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 40px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #d6dae2;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                }
+
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .countdown-right-layer {
+            display: inline-block;
+            padding: 19px 79px;
+            background-color: #fe5a86;
+            transform: rotate(270deg);
+            position: absolute;
+            top: 83px;
+            right: -93px;
+
+            p {
+                color: $secondary_bg;
+                @include fonts(18px, 600);
+            }
+        }
+    }
+}

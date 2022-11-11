@@ -1,0 +1,238 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#header {
+
+    // ---header top css start--- //
+    .header-top {
+        background-color: $primary_bg;
+        @include pgap(10px, 0, 10px, 0);
+
+        .header-text {
+            padding-right: 25px;
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                li {
+                    padding-left: 20px;
+
+                    i {
+                        color: $secondary_bg;
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:nth-child(2) i {
+                        transform: rotate(-260deg);
+                        -webkit-transform: rotate(-260deg);
+                        -moz-transform: rotate(-260deg);
+                        -ms-transform: rotate(-260deg);
+                        -o-transform: rotate(-260deg);
+                    }
+
+                    p {
+                        display: inline-block;
+                        padding-right: 25px;
+                        padding-left: 10px;
+                        border-right: 1px solid #ff94b1;
+                        @include fonts(16px, 600);
+                        color: $secondary_bg;
+                    }
+
+                    &:nth-child(3) p {
+                        border: none;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        .header-icon {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: end;
+
+                li {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    border-right: 1px solid #ff94b1;
+
+                    &:last-child {
+                        padding-right: 0;
+                        border: none;
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    i {
+                        color: $secondary_bg;
+                        font-weight: 400;
+                        font-size: 16px;
+                        transition: all linear .3s;
+                        -webkit-transition: all linear .3s;
+                        -moz-transition: all linear .3s;
+                        -ms-transition: all linear .3s;
+                        -o-transition: all linear .3s;
+                    }
+
+                    a {
+                        background-color: transparent;
+
+                        &:hover i {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ---header top css end--- //
+
+    // ---header bottom css start--- //
+    .header-bottom {
+        .navbar {
+            @include pgap(30px, 0, 20px, 0);
+
+            .nav-item {
+                .dropdown-toggle {
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:first-child {
+                    .nav-link {
+                        margin-left: 0;
+                    }
+                }
+
+                .nav-link {
+                    @include pgap(0, 0, 0, 0);
+                    color: $heading_color;
+                    @include fonts(18px, 600);
+                    @include mgap(0, 15px, 0, 15px);
+                    transition: all linear .3s;
+                    -webkit-transition: all linear .3s;
+                    -moz-transition: all linear .3s;
+                    -ms-transition: all linear .3s;
+                    -o-transition: all linear .3s;
+
+                    &:hover {
+                        color: $primary_bg;
+                    }
+                }
+            }
+
+            .dropdown {
+                .dropdown-menu {
+
+                    .dropdown-item {
+                        color: $heading_color;
+                        @include fonts(18px, 600);
+
+                        &:hover {
+                            background-color: $primary_bg;
+                        }
+                    }
+                }
+            }
+
+            .book-visit-btn {
+                a {
+                    margin-right: 10px;
+                }
+            }
+
+            .side-bar-btn {
+                background-color: $primary_bg;
+                padding: 15px 18px;
+                margin-left: 15px;
+                border: 1px solid $primary_bg;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+
+                i {
+                    color: $secondary_bg;
+                    transition: all linear .3s;
+                    -webkit-transition: all linear .3s;
+                    -moz-transition: all linear .3s;
+                    -ms-transition: all linear .3s;
+                    -o-transition: all linear .3s;
+                }
+
+                &:hover {
+                    background-color: transparent;
+
+                    i {
+                        color: $primary_bg;
+                        transition: all linear .3s;
+                        -webkit-transition: all linear .3s;
+                        -moz-transition: all linear .3s;
+                        -ms-transition: all linear .3s;
+                        -o-transition: all linear .3s;
+                    }
+                }
+            }
+
+            .search-btn {
+                background-color: $primary_bg;
+                padding: 15px 18px;
+                border: 1px solid $primary_bg;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                transition: all linear .3s;
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -ms-transition: all linear .3s;
+                -o-transition: all linear .3s;
+
+                i {
+                    color: $secondary_bg;
+                }
+
+                &:hover {
+                    background-color: transparent;
+
+                    i {
+                        color: $primary_bg;
+                    }
+                }
+            }
+
+            .navbar-toggler {
+                padding: 12px 14px;
+                background-color: $primary_bg;
+
+                i {
+                    color: $secondary_bg;
+                    font-size: 28px;
+                }
+            }
+
+        }
+
+    }
+
+    // ---header bottom css end--- //
+}

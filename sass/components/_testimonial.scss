@@ -1,0 +1,115 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#testimonial {
+    padding-top: 120px;
+    padding-bottom: 200px;
+    position: relative;
+
+    .testimonial-shap1 {
+        position: absolute;
+        left: 305px;
+        top: 120px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+        -webkit-filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+    }
+
+    .testimonial-shap2 {
+        position: absolute;
+        left: 110px;
+        bottom: 270px;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+        -webkit-filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+    }
+
+    .testimonial-shap3 {
+        position: absolute;
+        top: 120px;
+        right: 110px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+        -webkit-filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+    }
+
+    .testimonial-shap4 {
+        position: absolute;
+        right: 250px;
+        bottom: 250px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+        -webkit-filter: drop-shadow(0px 8px 14px rgba(0, 0, 0, 0.2));
+    }
+
+    .testimonial-row {
+        margin-top: 30px;
+
+        .testimonial-wrapper {
+            text-align: center;
+
+            .testimonial-person {
+                width: 115px;
+                height: 115px;
+                overflow: hidden;
+                margin: 0 auto;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+
+            .testimonial-comment {
+                margin-top: 40px;
+                margin-bottom: 40px;
+
+                p {
+                    @include fonts(24px, 400);
+                    line-height: 40px;
+                }
+            }
+
+            .testimonial-person-details {
+                h3 {
+                    @include fonts(24px, 800);
+                }
+
+                p {
+                    color: $primary_bg;
+                    @include fonts(18px, 400);
+                }
+
+            }
+        }
+    }
+
+}

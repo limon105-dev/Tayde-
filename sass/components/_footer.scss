@@ -1,0 +1,242 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#footer {
+    position: relative;
+
+    .footer-top-layer {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .footer-top {
+        border-bottom: 10px solid #2a3348;
+
+        .footer-top-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-top: 100px;
+            padding-bottom: 90px;
+            border-right: 1px solid #2a3348;
+
+            .top-icon {
+                i {
+                    color: $secondary_bg;
+                    font-size: 30px;
+                }
+            }
+
+            .top-contact {
+                margin-left: 15px;
+
+                p {
+                    color: #bec3ce;
+                    @include fonts(16px, 400);
+                }
+
+                h2 {
+                    color: $secondary_bg;
+                    @include fonts(24px, 800);
+                }
+            }
+        }
+    }
+
+    .footer-btm {
+        margin-top: 100px;
+        padding-bottom: 50px;
+
+        .footer-btm-item {
+            h2 {
+                margin-bottom: 30px;
+                color: $secondary_bg;
+                @include fonts(24px, 800);
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: -10px;
+                    width: 50px;
+                    height: 1px;
+                    background-color: #2a3348;
+                }
+            }
+
+            p {
+                color: $secondary_bg;
+                @include fonts(16px, 400);
+            }
+
+            .contact-list {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-top: 25px;
+
+                li {
+                    margin: 0 5px;
+
+                    a {
+                        i {
+                            color: $secondary_bg;
+                            width: 40px;
+                            height: 40px;
+                            text-align: center;
+                            line-height: 40px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                        }
+                    }
+
+                    &:first-child a i {
+                        background-color: #2c6ac0;
+                    }
+
+                    &:nth-child(2) a i {
+                        background-color: #de4b39;
+                    }
+
+                    &:nth-child(3) a i {
+                        background-color: #54abf0;
+                    }
+
+                    &:last-child a i {
+                        background-color: #bd071d;
+                    }
+                }
+            }
+
+            .info-list {
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: #bec3ce;
+                        @include fonts(16px, 400);
+
+                        &:hover {
+                            margin-left: 10px;
+                            color: $primary_bg;
+                        }
+
+                    }
+                }
+            }
+
+            .news-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .news-img {
+                    max-width: 95px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                }
+
+                .news-details {
+                    max-width: 57%;
+                    margin-left: 20px;
+
+                    p {
+                        color: #bec3ce;
+                        @include fonts(12px, 400);
+                    }
+
+                    h3 {
+                        a {
+                            margin-top: 5px;
+                            color: $secondary_bg;
+                            @include fonts(16px, 600);
+
+                            &:Hover {
+                                background-color: transparent;
+                                color: $primary_bg;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mail-submit {
+                margin-top: 20px;
+                background-color: $secondary_bg;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+
+                input {
+                    border: none;
+                    padding: 10px;
+                    color: #74787c;
+                    @include fonts(16px, 400);
+
+                    &::placeholder {
+                        color: #74787c;
+                        @include fonts(16px, 400);
+                    }
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    border: none;
+                    padding: 10px 14px;
+                    background-color: $primary_bg;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+
+                    i {
+                        color: $secondary_bg;
+                    }
+                }
+            }
+
+            .mail-info {
+                display: block;
+                margin-top: 15px;
+                color: $primary_bg;
+                @include fonts(14px, 400);
+            }
+        }
+    }
+
+    .copyright {
+        padding-top: 40px;
+        padding-bottom: 20px;
+
+        .copy-text {
+            p {
+                color: #bec3ce;
+                @include fonts(16px, 400);
+
+                a {
+                    color: #bec3ce;
+
+                    &:hover {
+                        color: $primary_bg;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

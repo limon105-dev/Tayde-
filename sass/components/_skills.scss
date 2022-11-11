@@ -1,0 +1,251 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#skills {
+    padding-top: 190px;
+    padding-bottom: 160px;
+    position: relative;
+
+    .skills-img5 {
+        position: absolute;
+        right: 200px;
+        bottom: -90px;
+        z-index: 1;
+    }
+
+    .skills-row {
+        padding-top: 35px;
+
+        .skills-left-wrapper {
+            position: relative;
+
+            .skills-img-left {
+                background-color: $secondary_bg;
+                max-width: 355px;
+                box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.07);
+                -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.07);
+                -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.07);
+                transform: rotate(10deg);
+                -webkit-transform: rotate(10deg);
+                -moz-transform: rotate(10deg);
+                -ms-transform: rotate(10deg);
+                -o-transform: rotate(10deg);
+
+                img {
+                    transform: rotate(-9deg);
+                    -webkit-transform: rotate(-9deg);
+                    -moz-transform: rotate(-9deg);
+                    -ms-transform: rotate(-9deg);
+                    -o-transform: rotate(-9deg);
+                }
+            }
+
+            .skills-img-right {
+                position: absolute;
+                right: 100px;
+                top: 184px;
+                z-index: 1;
+                background-color: $secondary_bg;
+                max-width: 355px;
+                box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.07);
+                -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.07);
+                -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.07);
+                transform: rotate(-10deg);
+                -webkit-transform: rotate(-10deg);
+                -moz-transform: rotate(-10deg);
+                -ms-transform: rotate(-10deg);
+                -o-transform: rotate(-10deg);
+
+                img {
+                    transform: rotate(9deg);
+                    -webkit-transform: rotate(9deg);
+                    -moz-transform: rotate(9deg);
+                    -ms-transform: rotate(9deg);
+                    -o-transform: rotate(9deg);
+                }
+            }
+
+            .skills-img-mid {
+                position: absolute;
+                top: -28px;
+                right: 150px;
+            }
+
+            .skills-img4 {
+                position: absolute;
+                right: 180px;
+                bottom: -290px;
+                z-index: -1;
+            }
+        }
+
+        .skills-right-wrapper {
+
+            .skills-progress-bar {
+                margin-top: 45px;
+
+                .progress {
+                    width: $size;
+                    height: $size;
+                    line-height: $size;
+                    background: none;
+                    margin: 0 auto;
+                    box-shadow: none;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        border: $borderWidth solid $border-color-default;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    >span {
+                        width: 50%;
+                        height: 100%;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 0;
+                        z-index: 1;
+                    }
+
+                    .progress-left {
+                        left: 0;
+                    }
+
+                    .progress-bar {
+                        width: 100%;
+                        height: 100%;
+                        background: none;
+                        border-width: $borderWidth;
+                        border-style: solid;
+                        position: absolute;
+                        top: 0;
+                        border-color: $border-color-fill;
+                    }
+
+                    .progress-bar2 {
+                        border-color: #1fbbf5;
+                        color: #1fbbf5 !important;
+                    }
+
+                    .progress-bar3 {
+                        border-color: $primary_bg;
+                        color: $primary_bg !important;
+                    }
+
+                    .progress-left .progress-bar {
+                        left: 100%;
+                        border-top-right-radius: ($size/2);
+                        border-bottom-right-radius: ($size/2);
+                        border-left: 0;
+                        -webkit-transform-origin: center left;
+                        transform-origin: center left;
+                    }
+
+                    .progress-right {
+                        right: 0;
+
+                        .progress-bar {
+                            left: -100%;
+                            border-top-left-radius: ($size/2);
+                            ;
+                            border-bottom-left-radius: ($size/2);
+                            ;
+                            border-right: 0;
+                            -webkit-transform-origin: center right;
+                            transform-origin: center right;
+                        }
+                    }
+
+                    .progress-value {
+                        display: flex;
+                        border-radius: 50%;
+                        font-size: 36px;
+                        line-height: 20px;
+                        align-items: center;
+                        height: 100%;
+                        font-weight: 300;
+                        margin: 0 auto;
+
+                        h3 {
+                            margin-top: 10px;
+                            @include fonts(40px, 800);
+                            color: $border-color-fill;
+                        }
+
+                        span {
+                            font-size: 12px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                .progress-heading {
+                    display: block;
+                    text-align: center;
+                    color: $para_color;
+                    @include fonts(18px, 500);
+                    margin-top: 30px;
+                }
+            }
+
+            @for $i from 1 through $howManySteps {
+                $stepName: ($i*(100 / $howManySteps));
+
+                //animation only the left side if below 50%
+                @if $i <=($howManySteps/2) {
+                    .progress[data-percentage="#{$stepName}"] {
+                        .progress-right .progress-bar {
+                            animation: loading-#{$i} $animationTime linear forwards;
+                        }
+
+                        .progress-left .progress-bar {
+                            animation: 0;
+                        }
+                    }
+                }
+
+                //animation only the right side if above 50%
+                @if $i>($howManySteps/2) {
+                    .progress[data-percentage="#{$stepName}"] {
+                        .progress-right .progress-bar {
+                            animation: loading-#{($howManySteps/2)} $animationTime linear forwards; //set the animation to longest animation
+                        }
+
+                        .progress-left .progress-bar {
+                            animation: loading-#{$i - ($howManySteps/2)} $animationTime linear forwards $animationTime;
+                        }
+                    }
+                }
+            }
+
+            //animation
+            @for $i from 1 through ($howManySteps/2) {
+                $degrees: (180/($howManySteps/2));
+                $degrees: ($degrees*$i);
+
+                @keyframes loading-#{$i} {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+
+                    100% {
+                        -webkit-transform: rotate($degrees);
+                        transform: rotate(#{$degrees}deg);
+                    }
+                }
+            }
+
+            //additional styling
+            .progress {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

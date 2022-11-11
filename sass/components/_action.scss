@@ -1,0 +1,26 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#action {
+    padding-top: 180px;
+    padding-bottom: 155px;
+    position: relative;
+    overflow: hidden;
+
+    .sec-title {
+        color: $secondary_bg;
+        margin-top: 30px;
+    }
+
+    .action-top-layer {
+        position: absolute;
+        left: 0;
+        top: -285px;
+    }
+
+    .action-btm-layer {
+        position: absolute;
+        left: 0;
+        bottom: -285px;
+    }
+}

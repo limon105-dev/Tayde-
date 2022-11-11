@@ -1,0 +1,150 @@
+@import'../mixins/mixins';
+@import'../variables/variables';
+
+#about {
+    padding-top: 150px;
+    padding-bottom: 190px;
+
+    .about-visit {
+        margin-top: 40px;
+        @include pgap(30px, 60px, 30px, 30px);
+        background-color: #ffeff3;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .visit-img {
+            width: 200px;
+            height: 110px;
+            overflow: hidden;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+
+        .visit-text {
+            width: 56%;
+
+            p {
+                color: $primary_bg;
+                @include fonts(20px, 600);
+                line-height: 28px;
+            }
+        }
+    }
+
+    .company-ownar {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .ownar-img {
+
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+
+        .ownar-details {
+            padding-left: 25px;
+
+            h3 {
+                @include fonts(24px, 700);
+            }
+
+            p {
+                @include fonts(16px, 400);
+            }
+        }
+
+        .ownar-signature {
+            margin-left: 40px;
+        }
+    }
+
+    .about-right-part {
+        position: relative;
+
+        .about-right-img {
+            overflow: hidden;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+
+
+        }
+
+        .special-box {
+            @include pgap(40px, 80px, 40px, 40px);
+            background-color: $primary_bg;
+            display: inline-block;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: absolute;
+            right: 0;
+            bottom: -120px;
+
+            .special-heading {
+                color: $secondary_bg;
+                @include fonts(24px, 700);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 50px;
+                    height: 2px;
+                    background-color: $secondary_bg;
+                }
+            }
+
+            .special-list {
+                padding-top: 25px;
+
+                li {
+                    color: $secondary_bg;
+                    @include fonts(18px, 500);
+                    padding-bottom: 10px;
+
+                    span {
+
+                        display: inline-block;
+
+                        i {
+                            width: 24px;
+                            height: 24px;
+                            border: 1px dashed #ddd;
+                            text-align: center;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            font-size: 12px;
+                            line-height: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
