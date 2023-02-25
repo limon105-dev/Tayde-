@@ -6,7 +6,7 @@
     .navbar-expand-lg .dropdown .dropdown-menu {
         transition: all 0.2s ease-in-out;
         display: block;
-        pointer-events: none;
+        pointer-events: auto;
         opacity: 0;
         margin: 0.625rem 0 0 0;
     }
@@ -75,7 +75,7 @@
     .navbar-expand-lg .dropdown .dropdown-menu {
         transition: all 0.2s ease-in-out;
         display: block;
-        pointer-events: none;
+        pointer-events: auto;
         opacity: 0;
         margin: 0.625rem 0 0 0;
     }
@@ -249,7 +249,7 @@
     .navbar-expand-lg .dropdown .dropdown-menu {
         transition: all 0.2s ease-in-out;
         display: block;
-        pointer-events: none;
+        pointer-events: auto;
         opacity: 0;
         margin: 0.625rem 0 0 0;
     }
